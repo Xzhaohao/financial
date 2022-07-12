@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+}
+
+// 在plugins{}块之前，只允许buildscript{}和其他插件{}脚本块，不允许其他语句
+apply from: "config.gradle"
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

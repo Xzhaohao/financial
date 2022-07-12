@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">金融</string>
+
+    <string name="tabBar_home">首页</string>
+    <string name="tabBar_finances">理财</string>
+    <string name="tabBar_borrowMoney">借钱</string>
+    <string name="tabBar_mine">我的</string>
+</resources>
