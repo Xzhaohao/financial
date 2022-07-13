@@ -153,13 +153,21 @@
                         android:textColor="@color/blackText3"
                         android:textSize="16sp" />
 
-                    <TextView
+                    <org.kuro.financial.view.button.RoundButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="6dp"
+                        android:paddingStart="6dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="6dp"
+                        android:paddingBottom="3dp"
                         android:text="@string/home_newcomer_exclusive"
                         android:textColor="#ff4c4c"
-                        android:textSize="12sp" />
+                        android:textSize="11sp"
+                        app:borderColor="#ff4c4c"
+                        app:radiusForBottomLeft="7dp"
+                        app:radiusForTopRight="7dp"
+                        app:textColorForPressed="#ff4c4c" />
                 </LinearLayout>
 
                 <TextView
