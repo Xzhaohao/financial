@@ -4,22 +4,23 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.kuro.financial.base.BaseUIActivity;
 import org.kuro.financial.fragment.BorrowFragment;
 import org.kuro.financial.fragment.FinanceFragment;
 import org.kuro.financial.fragment.HomeFragment;
 import org.kuro.financial.fragment.MineFragment;
+import org.kuro.financial.utils.SystemUI;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseUIActivity {
 
     private BottomNavigationView tabBar;
     private List<Fragment> mFragments;

@@ -1,22 +1,14 @@
 package org.kuro.financial.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import com.google.android.material.button.MaterialButton;
 
 import org.kuro.financial.R;
+import org.kuro.financial.base.BaseFragment;
 import org.kuro.financial.ui.LoginActivity;
 
-import java.util.Objects;
-
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
 
     public HomeFragment() {
     }
@@ -29,20 +21,18 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int initLayout() {
+        return R.layout.fragment_home;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+    protected void initView() {
+        MaterialButton button = mRootView.findViewById(R.id.home_login_get);
+        button.setOnClickListener(v -> navigateTo(LoginActivity.class));
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        TextView tv = requireActivity().findViewById(R.id.tv_home);
-        tv.setOnClickListener(v -> startActivity(new Intent(requireActivity(), LoginActivity.class)));
+    protected void initData() {
+
     }
 }

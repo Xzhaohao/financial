@@ -23,11 +23,15 @@
     <color name="aoColor8">#cb1bff</color>
 
     <color name="textColor">#4C5765</color>
-    <color name="red_text">#FF9999</color>
+    <color name="redText">#FF9999</color>
+    <color name="blackText3">#333333</color>
+    <color name="blackText2">#222222</color>
 
     <color name="bgGray">#f2f2f2</color>
     <color name="mainGray">#F2F6F7</color>
+    <color name="gray_5">#555555</color>
     <color name="gray_6">#666666</color>
+    <color name="gray_7">#777777</color>
 
     <color name="tabBar_unselected">#a0a0a0</color>
 
