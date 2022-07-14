@@ -2,11 +2,10 @@ package org.kuro.financial.ui;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import org.kuro.financial.R;
+import org.kuro.financial.base.BaseUIActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseUIActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

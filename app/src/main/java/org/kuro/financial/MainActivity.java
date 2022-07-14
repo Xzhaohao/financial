@@ -15,7 +15,6 @@ import org.kuro.financial.fragment.BorrowFragment;
 import org.kuro.financial.fragment.FinanceFragment;
 import org.kuro.financial.fragment.HomeFragment;
 import org.kuro.financial.fragment.MineFragment;
-import org.kuro.financial.utils.SystemUI;
 
 import java.util.ArrayList;
 import java.util.List;
