@@ -42,4 +42,6 @@
     <color name="input_hint">#C8C9CC</color>
     <color name="bottom_line">#EBEDF0</color>
     <color name="line">#E5E5E5</color>
+
+    <color name="project_num_red">#ff4c4c</color>
 </resources>

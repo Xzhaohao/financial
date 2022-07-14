@@ -38,4 +38,11 @@
     <string name="login_mobile">请输入手机号码</string>
     <string name="login_password">请输入密码</string>
     <string name="login_forget">忘记密码？</string>
+
+    <!-- 借钱 -->
+    <string name="borrow_min_day_rate">最低日利率</string>
+    <string name="borrow_day_rate_num">0.02%</string>
+    <string name="borrow_received_time">到账时间</string>
+    <string name="borrow_received_time_num">30分钟</string>
+    <string name="borrow_query_limit">查询额度</string>
 </resources>

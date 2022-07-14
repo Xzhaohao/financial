@@ -4,7 +4,7 @@
     package="org.kuro.financial">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Financial"
         tools:targetApi="31">
+
+        <!-- OPPO、VIVO 刘海屏适配 -->
+        <meta-data android:name="android.max_aspect" android:value="2.2" />
+        <!-- 小米 刘海屏适配 -->
+        <meta-data android:name="notch.config" android:value="portrait|landscape" />
 
         <!-- 启动页 -->
         <activity

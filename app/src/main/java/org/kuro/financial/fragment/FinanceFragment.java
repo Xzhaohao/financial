@@ -16,10 +16,7 @@ public class FinanceFragment extends Fragment {
     }
 
     public static FinanceFragment newInstance() {
-        FinanceFragment fragment = new FinanceFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
+        return new FinanceFragment();
     }
 
     @Override

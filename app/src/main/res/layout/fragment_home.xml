@@ -128,7 +128,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="288dp"
+            android:layout_height="270dp"
             android:layout_marginBottom="200dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
@@ -136,135 +136,128 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingTop="15dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_five_product"
-                        android:textColor="@color/blackText3"
-                        android:textSize="16sp" />
-
-                    <org.kuro.financial.view.button.RoundButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:paddingStart="6dp"
-                        android:paddingTop="3dp"
-                        android:paddingEnd="6dp"
-                        android:paddingBottom="3dp"
-                        android:text="@string/home_newcomer_exclusive"
-                        android:textColor="#ff4c4c"
-                        android:textSize="11sp"
-                        app:borderColor="#ff4c4c"
-                        app:radiusForBottomLeft="7dp"
-                        app:radiusForTopRight="7dp"
-                        app:textColorForPressed="#ff4c4c" />
-                </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:text="@string/home_interest_rate"
+                    android:text="@string/home_five_product"
+                    android:textColor="@color/blackText3"
+                    android:textSize="16sp" />
+
+                <org.kuro.financial.view.button.RoundButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/home_newcomer_exclusive"
+                    android:textColor="#ff4c4c"
+                    android:textSize="11sp"
+                    app:borderColor="@color/project_num_red"
+                    app:radiusForBottomLeft="7dp"
+                    app:radiusForTopRight="7dp"
+                    app:textColorForPressed="@color/project_num_red" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:gravity="center"
+                android:text="@string/home_interest_rate"
+                android:textColor="@color/gray_6"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:gravity="center"
+                android:text="@string/home_10percent"
+                android:textColor="@color/project_num_red"
+                android:textSize="40sp" />
+
+            <View
+                style="@style/default_line"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="26dp"
+                android:background="#cccccc" />
+
+            <!-- 起投金额栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="166dp"
+                android:layout_marginEnd="26dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/home_invest_start"
                     android:textColor="@color/gray_6"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="18dp"
-                    android:gravity="center"
-                    android:text="@string/home_10percent"
-                    android:textColor="#ff4c4c"
-                    android:textSize="40sp" />
+                    android:text="@string/home_invest_start_num"
+                    android:textColor="@color/project_num_red"
+                    android:textSize="14sp" />
 
-                <View
-                    style="@style/default_line"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginEnd="26dp"
-                    android:background="#cccccc" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_invest_start_unit"
+                    android:textColor="@color/gray_6"
+                    android:textSize="14sp" />
 
-                <!-- 起投金额栏 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="26dp"
-                    android:orientation="horizontal">
+                    android:gravity="right"
+                    tools:ignore="RtlHardcoded">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
-                        android:text="@string/home_invest_start"
+                        android:text="@string/home_lending_term"
                         android:textColor="@color/gray_6"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_invest_start_num"
-                        android:textColor="#ff4c4c"
+                        android:text="@string/home_lending_term_num"
+                        android:textColor="@color/project_num_red"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_invest_start_unit"
+                        android:text="@string/home_lending_term_unit"
                         android:textColor="@color/gray_6"
                         android:textSize="14sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        tools:ignore="RtlHardcoded">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="10dp"
-                            android:text="@string/home_lending_term"
-                            android:textColor="@color/gray_6"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/home_lending_term_num"
-                            android:textColor="#ff4c4c"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/home_lending_term_unit"
-                            android:textColor="@color/gray_6"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
                 </LinearLayout>
-                <!-- 起投金额栏 end -->
-
-                <Button
-                    style="@style/primary_button"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/home_lending" />
 
             </LinearLayout>
+            <!-- 起投金额栏 end -->
+
+            <Button
+                style="@style/primary_button"
+                android:layout_gravity="center"
+                android:layout_marginTop="92dp"
+                android:text="@string/home_lending" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

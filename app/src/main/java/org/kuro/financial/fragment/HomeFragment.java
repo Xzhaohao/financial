@@ -1,7 +1,5 @@
 package org.kuro.financial.fragment;
 
-import android.os.Bundle;
-
 import com.google.android.material.button.MaterialButton;
 
 import org.kuro.financial.R;
@@ -14,10 +12,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
+        return new HomeFragment();
     }
 
     @Override

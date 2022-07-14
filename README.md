@@ -8,3 +8,6 @@
 
 - 登录页
 <img src="/doc/login.jpg" width="30%" />
+
+- 借钱
+<img src="/doc/borrow.jpg" width="30%" />
