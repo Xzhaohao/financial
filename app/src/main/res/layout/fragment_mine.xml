@@ -1,17 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#f5fafd"
+    android:orientation="vertical"
     tools:context=".fragment.MineFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="我的"
-        android:textColor="@color/textColor"
-        android:textSize="90sp" />
+        android:layout_height="192dp"
+        android:background="@mipmap/mine_bg"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
 
-</FrameLayout>
+        <!-- 头像、昵称、设置 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <org.kuro.financial.view.avatar.Avatar
+                android:id="@+id/mine_avatar"
+                android:layout_width="38dp"
+                android:layout_height="38dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:text="@string/mine_nickname"
+                android:textColor="#e8eeff"
+                android:textSize="13sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/mine_setting"
+                android:src="@mipmap/setting" />
+        </RelativeLayout>
+        <!-- 头像、昵称、设置 end -->
+
+        <!--总资产 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/mine_white_text"
+                android:text="@string/mine_property" />
+
+            <ImageView
+                android:id="@+id/property_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@string/mine_property"
+                android:src="@mipmap/no_eye" />
+        </LinearLayout>
+        <!--总资产 end -->
+
+        <TextView
+            android:id="@+id/mine_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/mine_property_num"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp">
+
+            <TextView
+                style="@style/mine_white_text"
+                android:layout_marginEnd="5dp"
+                android:text="@string/mine_income_yesterday" />
+
+            <TextView
+                android:id="@+id/mine_income_yesterday"
+                style="@style/mine_white_text"
+                android:text="@string/mine_property_num" />
+
+            <TextView
+                style="@style/mine_white_text"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/mine_income_count" />
+
+            <TextView
+                android:id="@+id/mine_income_count"
+                style="@style/mine_white_text"
+                android:text="@string/mine_property_num" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 小菜单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/mine_sign_in"
+            app:drawableTopCompat="@mipmap/mine_sign_in" />
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/mine_borrow_money"
+            app:drawableTopCompat="@mipmap/mine_borrow_money" />
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/mine_card_roll"
+            app:drawableTopCompat="@mipmap/mine_roll" />
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/mine_bank_card"
+            app:drawableTopCompat="@mipmap/mine_bank_card" />
+
+    </LinearLayout>
+    <!-- 小菜单 end -->
+
+    <!-- 可用余额 -->
+    <LinearLayout
+        style="@style/mine_option_layout"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/mine_option_title"
+            android:text="@string/mine_balance"
+            app:drawableLeftCompat="@mipmap/mine_balance" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/mine_balance_num"
+            android:textColor="@color/project_num_red"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine_recharge"
+                android:textColor="@color/project_num_red"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine_withdraw_cash"
+                android:textColor="@color/blackText3"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 可用余额 end -->
+
+    <View style="@style/mine_line" />
+
+    <!-- 收支记录 -->
+    <RelativeLayout style="@style/mine_option_layout">
+
+        <TextView
+            style="@style/mine_option_title"
+            android:layout_centerVertical="true"
+            android:text="@string/mine_income_log"
+            app:drawableLeftCompat="@mipmap/mine_income_expenses" />
+
+        <ImageView
+            style="@style/mine_option_arrow"
+            android:contentDescription="@string/mine_nickname" />
+    </RelativeLayout>
+    <!-- 收支记录 end -->
+
+    <View style="@style/mine_line" />
+
+    <!-- 消息 -->
+    <RelativeLayout style="@style/mine_option_layout">
+
+        <TextView
+            style="@style/mine_option_title"
+            android:layout_centerVertical="true"
+            android:text="@string/mine_message"
+            app:drawableLeftCompat="@mipmap/mine_message" />
+
+        <ImageView
+            style="@style/mine_option_arrow"
+            android:contentDescription="@string/mine_nickname" />
+    </RelativeLayout>
+    <!-- 消息 end -->
+
+    <View style="@style/mine_line" />
+
+    <!-- 联系客服 -->
+    <RelativeLayout style="@style/mine_option_layout">
+
+        <TextView
+            style="@style/mine_option_title"
+            android:layout_centerVertical="true"
+            android:text="@string/mine_contact"
+            app:drawableLeftCompat="@mipmap/mine_contact" />
+
+        <ImageView
+            style="@style/mine_option_arrow"
+            android:contentDescription="@string/mine_nickname" />
+    </RelativeLayout>
+    <!-- 联系客服 end -->
+
+</LinearLayout>

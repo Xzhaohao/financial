@@ -17,7 +17,7 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <!-- 小菜单 -->
+    <!-- Home 小菜单 -->
     <style name="main_menu_item">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>

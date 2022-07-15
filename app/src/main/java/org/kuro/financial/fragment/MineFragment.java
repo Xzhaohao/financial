@@ -1,35 +1,52 @@
 package org.kuro.financial.fragment;
 
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.kuro.financial.R;
+import org.kuro.financial.base.BaseFragment;
+import org.kuro.financial.view.avatar.Avatar;
 
-public class MineFragment extends Fragment {
+public class MineFragment extends BaseFragment {
 
     public MineFragment() {
     }
 
     public static MineFragment newInstance() {
-        MineFragment fragment = new MineFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
+        return new MineFragment();
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int initLayout() {
+        return R.layout.fragment_mine;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mine, container, false);
+    protected void initView() {
+        Avatar avatar = mRootView.findViewById(R.id.mine_avatar);
+        avatar.setImageUrl(avatar, "https://nlgc-api.oss-cn-shenzhen.aliyuncs.com/avatar/3.png", true);
+
+        TextView property = mRootView.findViewById(R.id.mine_property);
+        TextView incomeYesterday = mRootView.findViewById(R.id.mine_income_yesterday);
+        TextView incomeCount = mRootView.findViewById(R.id.mine_income_count);
+        ImageView eye = mRootView.findViewById(R.id.property_eye);
+        eye.setOnClickListener(v -> {
+            if (property.getText().toString().equals("****")) {
+                property.setText(R.string.mine_balance_num);
+                incomeYesterday.setText(R.string.mine_income_yesterday_num);
+                incomeCount.setText(R.string.mine_income_count_num);
+                eye.setImageResource(R.mipmap.eye);
+            } else {
+                property.setText(R.string.mine_property_num);
+                incomeYesterday.setText(R.string.mine_property_num);
+                incomeCount.setText(R.string.mine_property_num);
+                eye.setImageResource(R.mipmap.no_eye);
+            }
+        });
+    }
+
+    @Override
+    protected void initData() {
+
     }
 }

@@ -45,4 +45,25 @@
     <string name="borrow_received_time">到账时间</string>
     <string name="borrow_received_time_num">30分钟</string>
     <string name="borrow_query_limit">查询额度</string>
+
+    <!-- 我的 -->
+    <string name="mine_sign_in">签到</string>
+    <string name="mine_borrow_money">借款</string>
+    <string name="mine_card_roll">卡卷包</string>
+    <string name="mine_bank_card">银行卡</string>
+    <string name="mine_balance">可用余额</string>
+    <string name="mine_balance_num">63505.00元</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_nickname">白花恋诗</string>
+    <string name="mine_property">总资产（元）</string>
+    <string name="mine_property_num">****</string>
+    <string name="mine_income_yesterday">昨日收益</string>
+    <string name="mine_income_yesterday_num">354.61</string>
+    <string name="mine_income_count">累计收益</string>
+    <string name="mine_income_count_num">9800.00</string>
+    <string name="mine_recharge">充值</string>
+    <string name="mine_withdraw_cash">提现</string>
+    <string name="mine_income_log">收支记录</string>
+    <string name="mine_message">消息</string>
+    <string name="mine_contact">联系客服</string>
 </resources>

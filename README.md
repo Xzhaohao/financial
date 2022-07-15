@@ -11,3 +11,6 @@
 
 - 借钱
 <img src="/doc/borrow.jpg" width="30%" />
+
+- 我的
+<img src="/doc/mine.jpg" width="30%" />
