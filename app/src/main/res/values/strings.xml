@@ -66,4 +66,20 @@
     <string name="mine_income_log">收支记录</string>
     <string name="mine_message">消息</string>
     <string name="mine_contact">联系客服</string>
+
+    <!-- 理财 -->
+    <string name="finances_invite">邀请好友</string>
+    <string name="finances_gift">新人有礼</string>
+    <string name="finances_contact">客服咨询</string>
+    <string name="finances_choose">为您甄选王牌理财</string>
+    <string name="finances_90day">金融网90天</string>
+    <string name="finances_180day">金融网180天</string>
+    <string name="finances_180">180天</string>
+    <string name="finances_1k">1000元起购</string>
+    <string name="finances_43">4.30%</string>
+    <string name="finances_46">4.60%</string>
+    <string name="finances_49">4.90%</string>
+    <string name="finances_income">满期年化收益率</string>
+    <string name="finances_accrual">当日起息</string>
+    <string name="finances_regular">定期理财</string>
 </resources>

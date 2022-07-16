@@ -42,4 +42,16 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <!-- RoundButton -->
+    <style name="round_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@color/project_num_red</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

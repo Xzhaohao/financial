@@ -149,16 +149,8 @@
                     android:textSize="16sp" />
 
                 <org.kuro.financial.view.button.RoundButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:paddingStart="6dp"
-                    android:paddingTop="3dp"
-                    android:paddingEnd="6dp"
-                    android:paddingBottom="3dp"
+                    style="@style/round_button"
                     android:text="@string/home_newcomer_exclusive"
-                    android:textColor="#ff4c4c"
-                    android:textSize="11sp"
                     app:borderColor="@color/project_num_red"
                     app:radiusForBottomLeft="7dp"
                     app:radiusForTopRight="7dp"

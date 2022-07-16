@@ -1,17 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".fragment.FinanceFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="74dp"
+        android:background="@color/primary"
         android:gravity="center"
-        android:text="理财"
-        android:textColor="@color/textColor"
-        android:textSize="90sp" />
+        android:paddingTop="26dp"
+        android:text="@string/tabBar_finances"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
-</FrameLayout>
+    <!-- 轮播图 -->
+    <org.kuro.financial.view.swipe.Swipe
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        app:AutoPlayTime="6000"
+        app:bannerBottomMargin="15dp"
+        app:isAutoPlay="false"
+        app:isClipChildrenMode="true"
+        app:isClipChildrenModeLessThree="true"
+        app:isHandLoop="true"
+        app:isShowIndicatorOnlyOne="true"
+        app:isShowNumberIndicator="false"
+        app:pageChangeDuration="800"
+        app:pointsVisibility="false" />
+    <!-- 轮播图 end -->
+
+    <!-- 3个小菜单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/finances_invite"
+            app:drawableTopCompat="@mipmap/finance_invite" />
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/finances_gift"
+            app:drawableTopCompat="@mipmap/finance_gift" />
+
+        <TextView
+            style="@style/mine_menu_item"
+            android:text="@string/finances_contact"
+            app:drawableTopCompat="@mipmap/finance_custom" />
+    </LinearLayout>
+    <!-- 3个小菜单 end -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#f5fafd" />
+
+    <!-- 为您甄选王牌理财 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/finances_choose"
+            android:textColor="@color/blackText2"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/shape_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/finances_90day"
+                        android:textColor="@color/blackText2"
+                        android:textSize="15sp" />
+
+                    <org.kuro.financial.view.button.RoundButton
+                        style="@style/round_button"
+                        android:text="@string/finances_accrual"
+                        app:borderColor="@color/project_num_red"
+                        app:radiusForBottomLeft="7dp"
+                        app:radiusForTopRight="7dp"
+                        app:textColorForPressed="@color/project_num_red" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/finances_43"
+                    android:textColor="@color/project_num_red"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_income"
+                    android:textColor="@color/gray_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/shape_card"
+                android:orientation="vertical"
+                android:padding="14dp"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_90day"
+                    android:textColor="@color/blackText2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/finances_46"
+                    android:textColor="@color/project_num_red"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_income"
+                    android:textColor="@color/gray_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 为您甄选王牌理财 end -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#f5fafd" />
+
+    <!-- 定期理财 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="@string/finances_regular"
+            android:textColor="@color/blackText2"
+            android:textSize="15sp" />
+
+        <View style="@style/default_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_49"
+                    android:textColor="@color/project_num_red"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_180day"
+                    android:textColor="@color/gray_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/finances_180"
+                    android:textColor="@color/blackText2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="@string/finances_1k"
+                    android:textColor="@color/gray_6"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <org.kuro.financial.view.progress.CircleProgress
+                    android:id="@+id/finance_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:bar_width="3dp"
+                    app:bg_color="#cdd7ff"
+                    app:progress_color="@color/primary"
+                    app:start_angle="270" />
+
+                <TextView
+                    android:id="@+id/finance_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray_6"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 定期理财 end -->
+</LinearLayout>
