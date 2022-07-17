@@ -118,6 +118,7 @@
         android:paddingEnd="20dp">
 
         <TextView
+            android:id="@+id/mine_sign_in"
             style="@style/mine_menu_item"
             android:text="@string/mine_sign_in"
             app:drawableTopCompat="@mipmap/mine_sign_in" />

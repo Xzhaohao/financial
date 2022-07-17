@@ -82,4 +82,10 @@
     <string name="finances_income">满期年化收益率</string>
     <string name="finances_accrual">当日起息</string>
     <string name="finances_regular">定期理财</string>
+
+    <!-- 签到 -->
+    <string name="sign_tip">连续签到7天可以活得大礼包哦</string>
+    <string name="sign_ranking">你是今日第6325名签到用户，获得了</string>
+    <string name="sign_gold">+10</string>
+    <string name="sign_in">已签到</string>
 </resources>
