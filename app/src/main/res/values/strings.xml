@@ -88,4 +88,7 @@
     <string name="sign_ranking">你是今日第6325名签到用户，获得了</string>
     <string name="sign_gold">+10</string>
     <string name="sign_in">已签到</string>
+
+    <!-- 我的消息 -->
+    <string name="message_title">我的消息</string>
 </resources>

@@ -33,13 +33,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- 主页 -->
         <activity android:name=".MainActivity" android:exported="false" />
         <!-- 登录页 -->
         <activity android:name=".ui.LoginActivity" android:exported="false" />
         <!-- 签到页 -->
         <activity android:name=".ui.SignInActivity" android:exported="false" />
+        <!-- 我的消息 -->
+        <activity android:name=".ui.MessageActivity" android:exported="false" />
     </application>
 
 </manifest>

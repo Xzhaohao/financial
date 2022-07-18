@@ -1,10 +1,12 @@
 package org.kuro.financial.fragment;
 
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.kuro.financial.R;
 import org.kuro.financial.base.BaseFragment;
+import org.kuro.financial.ui.MessageActivity;
 import org.kuro.financial.ui.SignInActivity;
 import org.kuro.financial.view.avatar.Avatar;
 
@@ -50,6 +52,10 @@ public class MineFragment extends BaseFragment {
         // 跳转签到页面
         TextView signIn = mRootView.findViewById(R.id.mine_sign_in);
         signIn.setOnClickListener(v -> navigateTo(SignInActivity.class));
+
+        // 跳转消息页面
+        RelativeLayout messageRow = mRootView.findViewById(R.id.message_row);
+        messageRow.setOnClickListener(v -> navigateTo(MessageActivity.class));
     }
 
     @Override

@@ -213,7 +213,9 @@
     <View style="@style/mine_line" />
 
     <!-- 消息 -->
-    <RelativeLayout style="@style/mine_option_layout">
+    <RelativeLayout
+        android:id="@+id/message_row"
+        style="@style/mine_option_layout">
 
         <TextView
             style="@style/mine_option_title"
