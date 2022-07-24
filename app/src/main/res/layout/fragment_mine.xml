@@ -134,6 +134,7 @@
             app:drawableTopCompat="@mipmap/mine_roll" />
 
         <TextView
+            android:id="@+id/mine_bank"
             style="@style/mine_menu_item"
             android:text="@string/mine_bank_card"
             app:drawableTopCompat="@mipmap/mine_bank_card" />

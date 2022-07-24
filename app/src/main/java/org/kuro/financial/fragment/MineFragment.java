@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import org.kuro.financial.R;
 import org.kuro.financial.base.BaseFragment;
+import org.kuro.financial.ui.BankActivity;
 import org.kuro.financial.ui.MessageActivity;
 import org.kuro.financial.ui.SignInActivity;
 import org.kuro.financial.view.avatar.Avatar;
@@ -56,6 +57,10 @@ public class MineFragment extends BaseFragment {
         // 跳转消息页面
         RelativeLayout messageRow = mRootView.findViewById(R.id.message_row);
         messageRow.setOnClickListener(v -> navigateTo(MessageActivity.class));
+
+        // 跳转我的银行卡页面
+        TextView mineBank = mRootView.findViewById(R.id.mine_bank);
+        mineBank.setOnClickListener(v -> navigateTo(BankActivity.class));
     }
 
     @Override

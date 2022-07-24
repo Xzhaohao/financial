@@ -91,4 +91,7 @@
 
     <!-- 我的消息 -->
     <string name="message_title">我的消息</string>
+
+    <!-- 我的银行卡 -->
+    <string name="bank_card_list">我的银行卡</string>
 </resources>
