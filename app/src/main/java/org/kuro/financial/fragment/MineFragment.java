@@ -9,6 +9,7 @@ import org.kuro.financial.base.BaseFragment;
 import org.kuro.financial.ui.BankActivity;
 import org.kuro.financial.ui.MessageActivity;
 import org.kuro.financial.ui.SignInActivity;
+import org.kuro.financial.ui.WithdrawActivity;
 import org.kuro.financial.view.avatar.Avatar;
 
 public class MineFragment extends BaseFragment {
@@ -61,6 +62,10 @@ public class MineFragment extends BaseFragment {
         // 跳转我的银行卡页面
         TextView mineBank = mRootView.findViewById(R.id.mine_bank);
         mineBank.setOnClickListener(v -> navigateTo(BankActivity.class));
+
+        // 跳转提现页面
+        TextView withdrawDeposit = mRootView.findViewById(R.id.mine_withdraw_deposit);
+        withdrawDeposit.setOnClickListener(v -> navigateTo(WithdrawActivity.class));
     }
 
     @Override

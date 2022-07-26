@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.WithdrawActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@color/primary"
+        android:paddingTop="26dp">
+
+        <ImageView
+            android:id="@+id/withdraw_back"
+            style="@style/action_bar_back"
+            android:contentDescription="@string/withdraw_deposit" />
+
+        <TextView
+            style="@style/action_bar_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/withdraw_deposit" />
+
+        <TextView
+            style="@style/action_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:text="@string/withdraw_deposit_log"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 假轮播图 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:contentDescription="@string/withdraw_deposit"
+        android:scaleType="fitXY"
+        android:src="@mipmap/withdraw_swipe" />
+    <!-- 假轮播图 end -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:background="#f5fafd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/withdraw_tip"
+            android:textColor="@color/blackText3"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:autofillHints=""
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:hint="@string/withdraw_deposit"
+            android:inputType="number"
+            android:textColor="@color/blackText2"
+            android:textColorHint="@color/black_tag"
+            android:textSize="25sp"
+            app:drawableLeftCompat="@mipmap/rmb" />
+
+        <View
+            style="@style/default_line"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_tag" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdraw_count"
+                android:textColor="@color/blackText3"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mine_income_count_num"
+                android:textColor="#2c6cff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_invest_start_unit"
+                android:textColor="@color/blackText3"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/withdraw_all"
+                android:textColor="#2c6cff"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/withdraw_ok"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="50dip" />
+    </LinearLayout>
+
+</LinearLayout>

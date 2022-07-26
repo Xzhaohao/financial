@@ -184,6 +184,7 @@
                 android:background="@color/line" />
 
             <TextView
+                android:id="@+id/mine_withdraw_deposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

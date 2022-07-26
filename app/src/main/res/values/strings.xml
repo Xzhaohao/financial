@@ -94,4 +94,13 @@
 
     <!-- 我的银行卡 -->
     <string name="bank_card_list">我的银行卡</string>
+
+    <!-- 提现 -->
+    <string name="withdraw_deposit">提现</string>
+    <string name="withdraw_deposit_log">提现记录</string>
+    <string name="withdraw_tip">提现金额（两小时内到账）</string>
+    <string name="withdraw_count">可提现金额</string>
+    <string name="withdraw_all">全部提现</string>
+    <string name="withdraw_ok">确认提现</string>
+
 </resources>

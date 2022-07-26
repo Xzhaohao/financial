@@ -44,10 +44,13 @@
             android:exported="false" /> <!-- 我的消息 -->
         <activity
             android:name=".ui.MessageActivity"
-            android:exported="false" />
-        <!-- 银行卡 -->
+            android:exported="false" /> <!-- 银行卡 -->
         <activity
             android:name=".ui.BankActivity"
+            android:exported="false" />
+        <!-- 提现 -->
+        <activity
+            android:name=".ui.WithdrawActivity"
             android:exported="false" />
     </application>
 

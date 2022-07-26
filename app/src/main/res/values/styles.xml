@@ -54,4 +54,19 @@
         <item name="android:textColor">@color/project_num_red</item>
         <item name="android:textSize">11sp</item>
     </style>
+
+    <!-- ActionBar标题 -->
+    <style name="action_bar_title">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- ActionBar返回图标 -->
+    <style name="action_bar_back">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:src">@mipmap/back_icon</item>
+    </style>
 </resources>

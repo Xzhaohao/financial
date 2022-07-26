@@ -15,20 +15,15 @@
 
         <ImageView
             android:id="@+id/bank_back"
-            android:layout_width="20dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
-            android:contentDescription="@string/bank_card_list"
-            android:src="@mipmap/back_icon" />
+            style="@style/action_bar_back"
+            android:contentDescription="@string/bank_card_list" />
 
         <TextView
+            style="@style/action_bar_title"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/bank_card_list"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:text="@string/bank_card_list" />
 
         <ImageView
             android:layout_width="20dp"
