@@ -7,6 +7,7 @@ import android.widget.TextView;
 import org.kuro.financial.R;
 import org.kuro.financial.base.BaseFragment;
 import org.kuro.financial.ui.BankActivity;
+import org.kuro.financial.ui.IncomeActivity;
 import org.kuro.financial.ui.MessageActivity;
 import org.kuro.financial.ui.SignInActivity;
 import org.kuro.financial.ui.WithdrawActivity;
@@ -66,6 +67,10 @@ public class MineFragment extends BaseFragment {
         // 跳转提现页面
         TextView withdrawDeposit = mRootView.findViewById(R.id.mine_withdraw_deposit);
         withdrawDeposit.setOnClickListener(v -> navigateTo(WithdrawActivity.class));
+
+        // 跳转收支明细页面
+        RelativeLayout incomeRow = mRootView.findViewById(R.id.income_row);
+        incomeRow.setOnClickListener(v -> navigateTo(IncomeActivity.class));
     }
 
     @Override

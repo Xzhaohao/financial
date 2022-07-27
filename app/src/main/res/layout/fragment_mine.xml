@@ -198,7 +198,9 @@
     <View style="@style/mine_line" />
 
     <!-- 收支记录 -->
-    <RelativeLayout style="@style/mine_option_layout">
+    <RelativeLayout
+        android:id="@+id/income_row"
+        style="@style/mine_option_layout">
 
         <TextView
             style="@style/mine_option_title"

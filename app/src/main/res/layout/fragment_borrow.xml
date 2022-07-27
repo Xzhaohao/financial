@@ -12,7 +12,7 @@
         android:layout_height="176dp"
         android:contentDescription="@string/tabBar_borrowMoney"
         android:scaleType="fitXY"
-        android:src="@mipmap/borrow_money_bg" />
+        android:src="@mipmap/income_bg" />
 
     <TextView
         android:layout_width="wrap_content"

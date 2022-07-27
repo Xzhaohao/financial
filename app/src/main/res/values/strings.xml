@@ -103,4 +103,14 @@
     <string name="withdraw_all">全部提现</string>
     <string name="withdraw_ok">确认提现</string>
 
+    <!-- 收支明细 -->
+    <string name="income">收支明细</string>
+    <string name="income_month">本月收入</string>
+    <string name="income_month_num">12000.00</string>
+    <string name="pay_month">本月支出</string>
+    <string name="pay_month_num">7000.00</string>
+    <string name="income_time">07/03</string>
+    <string name="income_week">周四</string>
+    <string name="income_unit1">收</string>
+    <string name="income_unit2">支</string>
 </resources>

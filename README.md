@@ -29,3 +29,6 @@
 
 - 提现
 <img src="/doc/withdraw.jpg" width="30%" />
+
+- 收支明细
+<img src="/doc/income.jpg" width="30%" />
