@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">金融</string>
 
+    <string name="loading">努力加载中…</string>
+
     <string name="tabBar_home">首页</string>
     <string name="tabBar_finances">理财</string>
     <string name="tabBar_borrowMoney">借钱</string>

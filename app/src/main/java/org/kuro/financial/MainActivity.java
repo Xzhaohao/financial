@@ -2,6 +2,8 @@ package org.kuro.financial;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.KeyEvent;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -21,15 +23,10 @@ import java.util.List;
 
 public class MainActivity extends BaseUIActivity {
 
-    private BottomNavigationView tabBar;
     private List<Fragment> mFragments;
 
     // 上次fragment的位置
     private int lastPosition;
-    // 要显示的Fragment
-    private Fragment currentFragment;
-    // 要隐藏的Fragment
-    private Fragment hideFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +63,12 @@ public class MainActivity extends BaseUIActivity {
 
     @SuppressLint("NonConstantResourceId")
     private void initView(Bundle savedInstanceState) {
-        tabBar = findViewById(R.id.tabBar);
+        BottomNavigationView tabBar = findViewById(R.id.tabBar);
         if (savedInstanceState == null) {
             // 根据传入的Bundle对象判断是正常启动还是重建 true表示正常启动，false表示重建
             setSelectedFragment(0);
         }
-        tabBar.setOnNavigationItemSelectedListener(menuItem -> {
+        tabBar.setOnItemSelectedListener(menuItem -> {
             switch (menuItem.getItemId()) {
                 case R.id.tabBar_home:
                     setSelectedFragment(0);
@@ -100,9 +97,9 @@ public class MainActivity extends BaseUIActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         // 要显示的fragment(解决了activity重建时新建实例的问题)
-        currentFragment = fragmentManager.findFragmentByTag("fragment" + position);
+        Fragment currentFragment = fragmentManager.findFragmentByTag("fragment" + position);
         // 要隐藏的fragment(解决了activity重建时新建实例的问题)
-        hideFragment = fragmentManager.findFragmentByTag("fragment" + lastPosition);
+        Fragment hideFragment = fragmentManager.findFragmentByTag("fragment" + lastPosition);
         if (position != lastPosition) {
             // 如果位置不同
             if (hideFragment != null) {
@@ -132,5 +129,34 @@ public class MainActivity extends BaseUIActivity {
         transaction.commit();
         // 更新要隐藏的fragment的位置
         lastPosition = position;
+    }
+
+
+    // 连续点击两次返回键退出当前应用
+    private boolean flag = true;
+    private static final int RESET_BACK = 1;
+    private final Handler handler = new Handler(message -> {
+        if (message.what == RESET_BACK) {
+            flag = true;
+        }
+        return true;
+    });
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && flag) {
+            showToast("再点击一次，退出当前应用");
+            flag = false;
+            return handler.sendEmptyMessageDelayed(RESET_BACK, 2000);
+        }
+        return super.onKeyUp(keyCode, event);
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // 为了防止内存泄漏，需要在onDestroy中移除所有未被执行的进程
+        handler.removeCallbacksAndMessages(null);
     }
 }

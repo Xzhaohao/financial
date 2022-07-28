@@ -3,7 +3,11 @@ package org.kuro.financial.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import org.kuro.financial.MainActivity;
 import org.kuro.financial.R;
@@ -31,8 +35,34 @@ public class IndexActivity extends BaseUIActivity {
 
         SystemUI.fixSystemUI(this, true);
 
-        mHandler.sendEmptyMessageDelayed(SKIP_MAIN, 2 * 1000);
+        mHandler.sendEmptyMessageDelayed(SKIP_MAIN, 2000);
         initView();
+
+        // 设置动画，从透明到不透明
+        AlphaAnimation animation = new AlphaAnimation(0, 1);
+        animation.setDuration(800);
+        // 动画变化率
+        animation.setInterpolator(new AccelerateInterpolator());
+
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                // 动画开始
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                // 动画结束：跳转页面
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                // 动画重复
+            }
+        });
+
+        RelativeLayout layout = findViewById(R.id.index_layout);
+        layout.startAnimation(animation);
     }
 
 
@@ -50,5 +80,12 @@ public class IndexActivity extends BaseUIActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mHandler.removeMessages(SKIP_MAIN);
     }
 }
